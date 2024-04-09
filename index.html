@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Headers</title>
+</head>
+<body>
+    <div id="headers">
+        <!-- Request headers will be displayed here -->
+    </div>
+    <script>
+        fetch('/')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('headers').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching headers:', error));
+    </script>
+</body>
+</html>
